@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚛️ Atomic Design in React</title>
+    <style>
+        :root {
+            --slide-active: #de89e3;
+            --highlight: #de89e372;
+            --radius: .5rem;
+        }
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .mt10 {
+            margin-top: 10rem;
+        }
+        .mbs {
+            margin-bottom: .7rem;
+        }
+        .sm {
+            font-size: 3.2rem;
+        }
+        .xs {
+            font-size: 2rem;
+        }
+        .center {
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .center--col {
+            flex-direction: column;
+        }
+        .highlight {
+            background-color: var(--highlight);
+            padding: 0 2rem;
+            border-radius: var(--radius);
+        }
+        .slide-jumper {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            font-size: 1.3rem;
+        }
+        .slide-jumper > div {
+            background-color: var(--highlight);
+            margin: 2rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: var(--radius);
+        }
+        .slide-jumper > div > a {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: inherit;
+            text-decoration: none;
+        }
+        .slide-active {
+            border: .3rem solid var(--slide-active);
+        }
+        .heading {
+            font-size: 6.4rem;
+            margin-bottom: 1.5rem;
+        }
+        .point {
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!--slide jumper-->
+    <div class="slide-jumper">
+        <div class="slide-active"><a href="#1">1</a></div>
+        <div><a href="#2">2</a></div>
+        <div><a href="#3">3</a></div>
+        <div><a href="#4">4</a></div>
+        <div><a href="#5">5</a></div>
+        <div><a href="#6">6</a></div>
+        <div><a href="#7">7</a></div>
+        <div><a href="#8">8</a></div>
+        <div><a href="#9">9</a></div>
+        <div><a href="#10">10</a></div>
+        <div><a href="#11">11</a></div>
+        <div><a href="#12">12</a></div>
+    </div>
+
+    <!--slide -->
+    <div class="center center--col" id="1">
+        <h1 class="heading">
+            ⚛️ <mark class="highlight">Atomic Design</mark> in React
+        </h1>
+        <p class="sm mt10 mbs">Dheeraj Mahra</p>
+        <p class="xs mbs">Front End Developer @Active.Ai</p>
+        <p class="xs">Nov 2020</p>
+    </div>
+
+    <!--slide -->
+    <div class="center" id="2">
+        <div>
+            <h1 class="heading">What is Atomic Design? 🧐</h1>
+            <p class="point">○ A <u>design methodology</u> introduced by Brad Frost (~5 years ago)</p>
+            <p class="point">○ Focuses on <u>modular</u> and <u>component-based</u> design</p>
+            <p class="point">○ Made for designing User Interfaces</p>
+        </div>
+    </div>
+
+    <!--slide -->
+    <div class="center" id="3">
+        <div>
+            <h1 class="heading">Where this idea came from? 🌱</h1>
+            <p class="point">○ from the universe</p>
+            <p class="point">○ Let's think from the angle of chemistry</p>
+            <p class="point">○ Everything around us is made up of atoms 🦠</p>
+            <p class="point">○ atoms + atoms -----> molecules 💧</p>
+            <p class="point">○ molecules + molecules -----> more complex organisms 💩</p>
+            <p class="point">○ Easy to understand complex organisms, </p>
+            <p class="point">○ if we have good knowledge of what it is made up of</p>
+        </div>
+    </div>
+
+    <!--slide -->
+    <div class="center" id="4">
+        <div>
+            <h1 class="heading">Can this be applied to UI? 🤔</h1>
+            <p class="point">Atomic chemistry idea + Brad Frost's 🧠 = <mark class="highlight">ATOMIC DESIGN</mark></p>
+        </div>
+    </div>
+
+    <!--slide -->
+    <div class="center" id="5">
+        <div>
+            <h1 class="heading">5 levels of Atomic Design 🚀</h1>
+            <img src="atomic.png" width="100%">
+        </div>
+    </div>
+
+    <!--slide -->
+    <div class="center" id="6">
+        <div>
+            <h1 class="heading">Let's break Instagram's UI 🧩</h1>
+        </div>
+    </div>
+
+    <!--slide -->
+    <div class="center" id="7">
+        <div style="text-align: center;">
+            <img src="instagram-atomic.png" width="80%">
+        </div>
+    </div>
+
+    <!--slide -->
+    <div class="center" id="8">
+        <div>
+            <h1 class="heading">Advantages of Atomic Design 😍</h1>
+            <p class="point">○ Abstract and Concrete view of the UI</p>
+            <p class="point">○ Separation between structure and content</p>
+            <p class="point">○ Reusability</p>
+            <p class="point">○ Modular Design</p>
+            <p class="point">○ Maintainable project structure</p>
+            <p class="point">○ Beautiful for creating Design Systems</p>
+        </div>
+    </div>
+
+    <!--slide -->
+    <div class="center" id="9">
+        <div>
+            <h1 class="heading">Implementation in React ⚛️</h1>
+            <p class="point">"Talk is cheap, show me the code!"</p>
+        </div>
+    </div>
+
+    <!--slide -->
+    <div class="center" id="10">
+        <div>
+            <h1 class="heading">When not to use Atomic Design ❌</h1>
+            <p class="point">○ Less reuse of componments</p>
+            <p class="point">○ Small projects - overkill for small projects</p>
+        </div>
+    </div>
+
+    <!--slide -->
+    <div class="center" id="11">
+        <div>
+            <h1 class="heading">Worth Reading Articles 📚</h1>
+            <p class="point">
+                ○ <a href="https://bradfrost.com/blog/post/atomic-web-design/">Brad Frost's article - highly recommended</a>
+            </p>
+            <p class="point">
+                ○ <a
+                    href="https://xd.adobe.com/ideas/process/ui-design/atomic-design-principles-methodology-101/">Adobe - good starter</a>
+            </p>
+            <p class="point">
+                ○ <a
+                    href="https://www.creativebloq.com/web-design/10-reasons-you-should-be-using-atomic-design-61620771">Creativebloq - know more about advantages</a>
+            </p>
+        </div>
+    </div>
+
+    <!--slide -->
+    <div class="center" id="12">
+        <div>
+            <h1 class="heading">Thank you lovely people 🤝</h1>
+            <p class="point">I would love to connect with you</p>
+            <p class="point">○ <a href="https://www.dheerajmahra.now.sh">Portfolio</a></p>
+            <p class="point">○ <a href="https://www.linkedin.com/in/dheerajmahra/">LinkedIn</a></p>
+            <p class="point">○ <a href="https://www.instagram.com/madsemicolon/">Madsemicolon</a></p>
+            <p class="point mbs">Special thanks to #TeamDevkode</p>
+            <p class="point">○ <a href="https://t.me/teamdevkode">Telegram</a></p>
+            <p class="point">○ <a href="https://www.instagram.com/devkode.io">Instagram</a></p>
+        </div>
+    </div>
+    
+    <!--javascript -->
+    <script>
+        window.onload = function() {
+
+            const jumper = document.querySelector('.slide-jumper')
+            const slides = Array.from(document.querySelectorAll('.slide-jumper > div'))
+
+            jumper.addEventListener('click', function(e) {
+
+                if(e.target.nodeName === 'DIV') return
+
+                for(let i = 0; i < slides.length; i++) {
+
+                    if(slides[i].firstChild.textContent === e.target.textContent) {
+                        slides[i].classList.add('slide-active')
+                    } else {
+                        slides[i].classList.remove('slide-active')
+                    }
+                }
+            })
+        }
+    </script>
+
+</body>
+</html>
